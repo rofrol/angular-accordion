@@ -1,0 +1,58 @@
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.accordion {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1px;
+}
+
+.accordion-content {
+  border: 1px solid #ddd;
+  padding: 0;
+  margin: 1px 0;
+  max-height: 0;
+  transition: max-height 0.05s ease-out;
+  overflow: hidden;
+}
+.accordion-content.active {
+  max-height: 999px;
+  transition: max-height 0.05s ease-in;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  user-select: none;
+  padding: 10px 0;
+}
+
+.btnControl {
+  display: none;
+}
+
+.btnControl:checked + .accordion + .accordion-content {
+  max-height: 999px;
+  transition: max-height 0.5s ease-in;
+}
+
+.btn > i {
+  margin: 0 10px;
+  transition: transform 0.05s ease-in;
+  font-weight: bold;
+}
+
+.btnControl:checked + .accordion > .btn > i {
+  transform: rotate(90deg);
+  transition: transform 0.1s ease-in;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "angular-accordion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:build": "postcss -c postcss.json",
+    "css:watch": "postcss --watch -c postcss.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rofrol/angular-accordion.git"
+  },
+  "author": "Roman Frołow",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rofrol/angular-accordion/issues"
+  },
+  "homepage": "https://github.com/rofrol/angular-accordion#readme",
+  "dependencies": {
+    "font-awesome": "^4.5.0",
+    "normalize.css": "^3.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.1",
+    "postcss-cli": "^2.5.0"
+  }
+}
